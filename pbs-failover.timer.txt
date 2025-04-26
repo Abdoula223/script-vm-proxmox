@@ -1,0 +1,10 @@
+[Unit]
+Description=Lancement automatique du failover PBS toutes les 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=pbs-failover.service
+
+[Install]
+WantedBy=timers.target
